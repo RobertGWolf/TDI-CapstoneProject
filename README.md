@@ -49,7 +49,7 @@ Transfer learning is a central tool of the model.  InceptionV3 with the top laye
 
 ### Deep Learning Feed Forward Network
 
-Two hidden layers are used as there is sufficient non-linearity in the problem even with the data transformation.  Batch noarmalization and dropout were the primary forms of regularization for the model which showed robustness to overfitting.  
+Two hidden layers are used as there is sufficient non-linearity in the problem even with the data transformation.  Batch noarmalization and dropout were the primary forms of regularization for the model which showed robust resistance to overfitting.  
 
 ## Model Results:
 ### Metrics: R-squared, Mean Absolute Error, Difference Scatter Plot
