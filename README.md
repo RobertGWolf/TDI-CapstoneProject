@@ -21,10 +21,29 @@ The dataset for this project is the Ultra High Carbon Steel dataset archived by 
   Due to the low number of images, data augmentation of the image set is needed.  
   *example picture of of augmented data, use micrograph 10*
 ### Data Transformation: Time and Temperature, analysis of Diffusion Equation
-$\phi(x,t) = \frac{1}{\sqrt{4\pi Dt}}e^{-\frac{x^2}{4Dt}}$
+The microstructure of the steel is a result diffusion, so it is sensible to consult the diffusion equation when decided how best the time and temperature data enter into the model.  The solution to the one dimensional equation is given by $\phi$ with diffusivity $D$.
 
-$D = D_0 e^{-\frac{E_A}{RT}}$
+$$\phi(x,t) = \frac{1}{\sqrt{4\pi Dt}}e^{-\frac{x^2}{4Dt}}$$
+
+$$D = D_0 e^{-\frac{E_A}{RT}}$$
+
+The solution is non-lienar with a singularity at $t=0$.  However if we neglect the singularity and apply a natural log we get the following.
+
+$$\ln{e^{-\frac{x^2}{4Dt}}} = -\frac{x^2}{4Dt}$$
+
+Applying a second natuarl logs gives a formula that is linear in inverse temperature and log time.  This is the movitvation for transforming the time/temperature data.
+
+$$ \begin{align*}
+\ln{\frac{4Dt}{x^2}}&= \ln{D} + \ln{t} + \ln{\frac{4}{x^2}}\\
+&= \ln{D_0 e^{-\frac{E_A}{RT}}} + \ln{t} + \ln{\frac{4}{x^2}}\\
+& = -\frac{E_A}{R}\frac{1}{T} + \ln{t} +\ln{\frac{4D_0}{x^2}}
+\end{align*}$$
+
+This motivation is vindicated as using untransformed data reusults in a model with negative R-squared values.  Running a smaller model with untransformed data results in R-squared values of $-0.7$ for temperature and $-0.6$ for time after 20 epochs.
+
 ### Data Transformation: Cooling Methods, one hot encoding
+Cooling data is included in the metadata for each sample.  Diffusion in steel is driven time and temperature so it is reasonable to assume that the cooling method effects the microstructure.  Two samples annealed at 900 °C for 180 minutes may have significant differences in their microstructures if one is furnace cooled and the other is air cooled.  To account for this in the model the cooling methods were one hot encoded for the regressor to predict.
+
 ### Transfer Learning: InceptionV3
 ### Deep Learning Feed Forward Network
 ## Model Results:
