@@ -31,7 +31,7 @@ The solution is non-lienar with a singularity at $t=0$.  However if we neglect t
 
 $$\ln{e^{-\frac{x^2}{4Dt}}} = -\frac{x^2}{4Dt}$$
 
-Applying a second natuarl logs gives a formula that is linear in inverse temperature and log time.  This is the movitvation for transforming the time/temperature data.
+Applying a second natural log gives a formula that is linear in inverse temperature and log time.  This is the movitvation for transforming the time/temperature data.
 
 $$ \begin{align*}
 \ln{\frac{4Dt}{x^2}}&= \ln{D} + \ln{t} + \ln{\frac{4}{x^2}}\\
