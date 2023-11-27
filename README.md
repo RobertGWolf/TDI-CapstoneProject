@@ -41,11 +41,28 @@ $$ \begin{align*}
 
 This motivation is vindicated as using untransformed data reusults in a model with negative R-squared values.  Running a smaller model with untransformed data results in R-squared values of $-0.7$ for temperature and $-0.6$ for time after 20 epochs.
 
-### Data Transformation: Cooling Methods, one hot encoding
+### Data Transformation: Cooling Methods and One Hot Encoding
 Cooling data is included in the metadata for each sample.  Diffusion in steel is driven time and temperature so it is reasonable to assume that the cooling method effects the microstructure.  Two samples annealed at 900 °C for 180 minutes may have significant differences in their microstructures if one is furnace cooled and the other is air cooled.  To account for this in the model the cooling methods were one hot encoded for the regressor to predict.
 
 ### Transfer Learning: InceptionV3
+Transfer learning is a central tool of the model.  InceptionV3 with the top layer removed is used for image processing with inputs scaled to the cropped pictures.  The layers are initially set to untrainable until sufficient converegence for the model.  The training layers are then turned back on to fine tune the model.  
+
 ### Deep Learning Feed Forward Network
+
+Two hidden layers are used as there is sufficient non-linearity in the problem even with the data transformation.  Batch noarmalization and dropout were the primary forms of regularization for the model which showed robustness to overfitting.  
+
 ## Model Results:
 ### Metrics: R-squared, Mean Absolute Error, Difference Scatter Plot
+
+The model uses Mean Squared Error for optimization, however the two primary metrics for the model are R-squared and Mean Absolute Error.
+chart: MAE for time and temp (14.8 °C  and 251 minutes) 
+chart: R-squared (.91 for T and .85 for time)
+note that there is a lot more variance in the time
+
+we can also get a feel for the accuracy from the bullseye graph
+show graph for all data
+show graph for cribbed data
+
+
+
 ### Metrics for naive Time, Temperature Data: negative R-squared values.
