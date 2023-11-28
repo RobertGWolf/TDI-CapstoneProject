@@ -92,3 +92,4 @@ The model uses Mean Squared Error for optimization, however the two primary metr
 
 
 ### Improvements to the Model
+Increased access to data for times in the typical heat treatment range (2 to 4 hours) would improve to the model.  There may be improvements to be made by an analysis of the sigularity of the solution to the diffusion equation.  Addiitional use of PIML techniques such as attaching the diffusion equation to the loss function would likely improve the model.  
