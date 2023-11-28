@@ -58,11 +58,8 @@ Two hidden layers are used as there is sufficient non-linearity in the problem e
 ### Metrics: R-squared, Mean Absolute Error, Difference Scatter Plot
 
 The model uses Mean Squared Error for optimization, however the two primary metrics for the model are R-squared and Mean Absolute Error.
-chart: MAE for time and temp (14.8 °C  and 251 minutes) 
-chart: R-squared (0.91 for T and 0.85 for time)
-note that there is a lot more variance in the time
-<p align ="center">
-<table border="1" class="dataframe">
+
+<table border="1" class="dataframe"align = "center">
   <thead>
     <tr style="text-align: center;">
       <th>Metrics</th>
@@ -76,24 +73,22 @@ note that there is a lot more variance in the time
       <td>0.856</td>
     </tr>
     <tr>
-      <th>Mean Percentage Error</th>
-      <td>0.013</td>
-      <td>0.382</td>
-    </tr>
-    <tr>
       <th>Mean Absolute Error</th>
       <td>14.8 degrees</td>
       <td>251 minutes</td>
     </tr>
   </tbody>
 </table>
-</p>
+<p align = "center">Tabel 1. Metric Data for Model  </p>
 
 
-We can also get a feel for the accuracy from the bullseye graph
-show graph for all data
-show graph for cribbed data
+<p align="center">
+<img src="https://github.com/RobertGWolf/TDI-CapstoneProject/assets/133603510/0b8467fe-8119-4d17-a8d1-3b24c83c86c2" />
+<p align = "center">Fig 3.  Difference Scatter Graph between Predicted Time and Temperature and True Time and Temperatures  </p>
+</p>.
 
 
 
-### Metrics for naive Time, Temperature Data: negative R-squared values.
+
+
+### Improvements to the Model
