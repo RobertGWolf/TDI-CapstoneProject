@@ -81,7 +81,7 @@ The model uses Mean Squared Error for optimization, however the two primary metr
 </table>
 <p align = "center">Tabel 1. Metric Data for Model  </p>
 
-We can see that there is better performance of the Temperature variable.   An examanintion of a bullseye diffenece graph between the predicted labels and true labels is due to samples with long anneal times (over 8 hours).  This is reasonable from a physical standpoint as there likely little difference between annealing a sample for 60 hours veruss 85 hours.   This graph can be explored more fully in the model notebook.
+We can see that there is better performance of the Temperature variable and we can see in table 1 that most of the error is with 20 degrees.   An examanintion of a bullseye diffenece graph between the predicted labels and true labels is due to samples with long anneal times (over 8 hours).  This is reasonable from a physical standpoint as there likely little difference between annealing a sample for 60 hours veruss 85 hours.   This graph can be explored more fully in the model notebook.
 
 <p align="center">
 <img src="https://github.com/RobertGWolf/TDI-CapstoneProject/assets/133603510/0b8467fe-8119-4d17-a8d1-3b24c83c86c2" />
