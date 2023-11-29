@@ -19,7 +19,12 @@ The dataset for this project is the Ultra High Carbon Steel dataset archived by 
 ## The Model
 ### Data Augmentation: Images
 Due to the low number of images, data augmentation of the image set is needed. An image is randomly flipped, rotated, translated, scaled and its contrast altered before being processed.    
-  *example picture of of augmented data, use micrograph 10*
+
+<p align="center">
+<img src="https://github.com/RobertGWolf/TDI-CapstoneProject/assets/133603510/c6815f0a-e435-4a61-8b1b-f2ec53bf3293" />
+<p align = "center">Fig 2.  Augemnted Varation of Fig 1.</p>
+</p>.
+
 ### Data Transformation: Time and Temperature, analysis of Diffusion Equation
 The temperature is converted from Celsius to Kelvin to validate scaling, the inverse is taken and then normalized by the standard scaler.  Time is given in hours and minutes in the metadata and is converted to minutes before taking the log an normalizing by the standard scaler.
 
