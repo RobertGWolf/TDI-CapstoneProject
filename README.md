@@ -17,12 +17,20 @@ What is a micrograph? It is a picture of the microstructure of the steel, it's m
 The dataset for this project is the Ultra High Carbon Steel dataset archived by <a href = "https://materialsdata.nist.gov">NIST</a>.  It contains approximately 600 micrographs of annealed UHCS samples with anneal times between 5 an 5100 minutes and anneal temepratures between 700 °C and 1100 °C.
 
 ## The Model
+The model architecture consists of three main pieces: data augmentation and preproceing, tranfer learning using the inceptionV3 model, and a feed-forward deep neural network.
+
+<p align="center">
+<img src="https://github.com/RobertGWolf/TDI-CapstoneProject/assets/133603510/6d0fdde4-38ca-44f5-9663-55dc272e5f70" />
+<p align = "center">Fig 2.  Augemnted Varation of Fig 1.</p>
+</p>
+
+
 ### Data Augmentation: Images
 Due to the low number of images, data augmentation of the image set is needed. An image is randomly flipped, rotated, translated, scaled and its contrast altered before being processed.    
 
 <p align="center">
 <img src="https://github.com/RobertGWolf/TDI-CapstoneProject/assets/133603510/c6815f0a-e435-4a61-8b1b-f2ec53bf3293" />
-<p align = "center">Fig 2.  Augemnted Varation of Fig 1.</p>
+<p align = "center">Fig 3.  Model Architecture.</p>
 </p>.
 
 ### Data Transformation: Time and Temperature, analysis of Diffusion Equation
@@ -74,8 +82,8 @@ The model uses Mean Squared Error for optimization, however the two primary metr
   <tbody>
     <tr>
       <th>R-Squared</th>
-      <td>0.918</td>
-      <td>0.856</td>
+      <td>0.92</td>
+      <td>0.77</td>
     </tr>
     <tr>
       <th>Mean Absolute Error</th>
