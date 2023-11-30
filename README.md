@@ -17,7 +17,7 @@ What is a micrograph? It is a picture of the microstructure of the steel, it's m
 The dataset for this project is the Ultra High Carbon Steel dataset archived by <a href = "https://materialsdata.nist.gov">NIST</a>.  It contains approximately 600 micrographs of annealed UHCS samples with anneal times between 5 an 5100 minutes and anneal temepratures between 700 °C and 1100 °C.
 
 ## The Model
-The model architecture consists of three main pieces: data augmentation and preproceing, tranfer learning using the inceptionV3 model, and a feed-forward deep neural network.
+The model architecture consists of three main pieces: data augmentation and preprocessing, tranfer learning using the inceptionV3 model, and a feed-forward deep neural network.
 
 <p align="center">
 <img src="https://github.com/RobertGWolf/TDI-CapstoneProject/assets/133603510/6d0fdde4-38ca-44f5-9663-55dc272e5f70" />
