@@ -57,7 +57,7 @@ $$ \begin{align*}
 This motivation is vindicated as using untransformed data results in a model with negative R-squared values.  This was verified with a smaller model using untransformed (save conversion to Kelvin and minutes along with standard scaling) data which yielded R-squared values of $-0.7$ for temperature and $-0.6$ for time after 20 epochs.
 
 ### Data Transformation: Cooling Methods and One Hot Encoding
-Cooling data is included in the metadata for each sample.  Diffusion in steel is driven time and temperature so it is reasonable to assume that the cooling method affects the microstructure.  Two samples annealed at 900 °C for 180 minutes may have significant differences in their microstructures if one is furnace cooled and the other is air cooled.  To account for this in the model the cooling methods were one hot encoded for the regressor to predict.
+Cooling data is included in the metadata for each sample.  Diffusion in steel is driven time and temperature so it is reasonable to assume that the cooling method affects the microstructure.  Two samples annealed at 900 °C for 180 minutes may have significant differences in their microstructures if one is furnace cooled and the other is air cooled.  To account for this in the model, the cooling methods were one hot encoded for the regressor to predict.
 
 ### Transfer Learning: InceptionV3
 Transfer learning is a central tool of the model.  InceptionV3 with the top layer removed is used for image processing with inputs scaled to the cropped pictures.  The layers are initially set to untrainable until sufficient converegence for the model is attained.  The training layers are then turned back on to fine tune the model.  
