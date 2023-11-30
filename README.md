@@ -34,7 +34,7 @@ Due to the low number of images, data augmentation of the image set is needed. A
 </p>.
 
 ### Data Transformation: Time and Temperature, analysis of Diffusion Equation
-The temperature is converted from Celsius to Kelvin to validate scaling, the inverse is taken and then normalized by the standard scaler.  Time is given in hours and minutes in the metadata and is converted to minutes before taking the log an normalizing by the standard scaler.
+The temperature is converted from Celsius to Kelvin to validate scaling, the inverse is taken and then normalized by the standard scaler.  Time is given in hours and minutes in the metadata and is converted to minutes before taking the log and normalizing by the standard scaler.
 
 Celsius to Kelvin, hours to minutes, and standard sclaing are straight forward conversions.  Justifying using inverse temperature and log time requires an examination of the underlying physics.  The microstructure of the steel is a result diffusion, so it is sensible to consult the diffusion equation when decided how best the time and temperature data enter into the model.  The solution to the one dimensional equation is given by $\phi$ with diffusivity $D$.
 
