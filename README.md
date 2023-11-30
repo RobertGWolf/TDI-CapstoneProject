@@ -106,4 +106,4 @@ We can see that there is better performance of the Temperature variable and we c
 
 
 ### Improvements to the Model
-Increased access to data for times in the typical heat treatment range (2 to 4 hours) would be the main avenue of improvement for the model.  There may be improvements to be made by an analysis of the sigularity of the solution to the diffusion equation.  Addiitional use of PIML techniques such as attaching the diffusion equation to the loss function would likely improve the model.  
+Increased access to data for times in the typical heat treatment range (2 to 4 hours) would be the main avenue of improvement for the model.  There may be improvements to the time predictions to be made by an analysis of the sigularity of the solution to the diffusion equation.  Addiitional use of PIML techniques such as attaching the diffusion equation to the loss function would likely improve the model.  
