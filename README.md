@@ -21,7 +21,7 @@ The model architecture consists of three main pieces: data augmentation and prep
 
 <p align="center">
 <img src="https://github.com/RobertGWolf/TDI-CapstoneProject/assets/133603510/6d0fdde4-38ca-44f5-9663-55dc272e5f70" />
-<p align = "center">Fig 2.  Augemnted Varation of Fig 1.</p>
+<p align = "center">Fig 2.  Model Architecture</p>
 </p>
 
 
@@ -30,7 +30,7 @@ Due to the low number of images, data augmentation of the image set is needed. A
 
 <p align="center">
 <img src="https://github.com/RobertGWolf/TDI-CapstoneProject/assets/133603510/c6815f0a-e435-4a61-8b1b-f2ec53bf3293" />
-<p align = "center">Fig 3.  Model Architecture.</p>
+<p align = "center">Fig 3. Augemnted Varation of Fig 1. </p>
 </p>.
 
 ### Data Transformation: Time and Temperature, analysis of Diffusion Equation
